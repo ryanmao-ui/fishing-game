@@ -1,0 +1,208 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #e9f6ff;
+    margin: 0;
+    padding: 0;
+}
+#game-square {
+    width: 650px;
+    height: 650px;
+    margin: 32px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 24px #aaa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+#game-header {
+    width: 100%;
+    text-align: center;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+#game-header h1 {
+    font-size: 1.5em;
+    color: #1e90ff;
+    margin: 0;
+    letter-spacing: 1px;
+}
+#square-layout {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+#sidebar {
+    width: 120px;
+    height: 590px;
+    background: #e0f3ff;
+    border-radius: 10px;
+    padding: 10px 0;
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+.sidebar-section {
+    font-weight: bold;
+    font-size: 1em;
+    color: #1574c7;
+    margin: 9px 0 4px 15px;
+    white-space: nowrap;
+}
+.sidebar-category {
+    padding: 5px 12px;
+    margin: 2px 0;
+    cursor: pointer;
+    border-radius: 7px;
+    color: #1e90ff;
+    font-weight: 500;
+    font-size: 0.95em;
+    transition: background 0.15s, color 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+.sidebar-category.active {
+    background: #1e90ff;
+    color: #fff;
+}
+.sidebar-category:hover {
+    background: #1574c7;
+    color: #fff;
+}
+#main {
+    flex: 1;
+    min-width: 260px;
+    height: 590px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+#info-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 7px;
+    justify-content: flex-start;
+}
+.info-box {
+    background: #e0f3ff;
+    border-radius: 8px;
+    padding: 2px 7px;
+    font-size: 0.93em;
+    color: #1e90ff;
+    box-shadow: 0 0 3px #c7eafd;
+    min-width: 60px;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid #c7eafd;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#action-panel {
+    background: #f7fbff;
+    border-radius: 8px;
+    min-height: 230px;
+    max-height: 520px;
+    padding: 8px 12px;
+    box-shadow: 0 0 3px #c7eafd;
+    font-size: 1em;
+    overflow-y: auto;
+}
+.shop-list, .inventory-list {
+    list-style: none;
+    padding-left: 0;
+}
+.shop-list li, .inventory-list li {
+    margin-bottom: 6px;
+}
+input[type="text"], input[type="number"] {
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    margin-right: 6px;
+    margin-bottom: 6px;
+    font-size: 1em;
+}
+.gamble-btn {
+    padding: 7px 14px;
+    background: #ffd700;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 1em;
+}
+.gamble-btn:hover {
+    background: #ffc107;
+}
+.result-win {
+    color: green;
+    font-weight: bold;
+}
+.result-lose {
+    color: red;
+    font-weight: bold;
+}
+.selected-fish {
+    background: #e0f3ff;
+    border-radius: 8px;
+    padding: 3px 8px;
+    margin: 3px 0;
+}
+.pixel-fish {
+    border: 1px solid #ccc;
+    background: #eee;
+    border-radius: 5px;
+    margin: 5px 0;
+    display: inline-block;
+}
+@media (max-width: 700px) {
+    #game-square {
+        width: 98vw;
+        height: auto;
+        min-width: 270px;
+        min-height: 420px;
+        padding: 0;
+    }
+    #sidebar {
+        width: 98vw;
+        height: auto;
+        margin-right: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 4px 0;
+    }
+    #main {
+        min-width: 180px;
+        height: auto;
+    }
+    #info-row {
+        flex-direction: column;
+        gap: 6px;
+        margin-bottom: 6px;
+    }
+    .info-box {
+        min-width: 60px;
+        padding: 5px 4px;
+        font-size: 0.96em;
+        height: 22px;
+    }
+}
