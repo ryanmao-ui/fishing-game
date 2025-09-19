@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fishing & Mining Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-square">
+        <div id="game-header">
+            <h1>Fishing & Mining Game</h1>
+        </div>
+        <div id="square-layout">
+            <div id="sidebar">
+                <div class="sidebar-section">Activities</div>
+                <div class="sidebar-category" onclick="setActivity('fishing')" id="sidebar-fishing">🎣 Fishing</div>
+                <div class="sidebar-category" onclick="setActivity('mining')" id="sidebar-mining">⛏️ Mining</div>
+                <div class="sidebar-section" id="fishing-actions-section" style="display:none;">Fishing Actions</div>
+                <div class="sidebar-category" onclick="setCategory('fish')" id="sidebar-fish" style="display:none;">Go Fishing</div>
+                <div class="sidebar-category" onclick="setCategory('sell')" id="sidebar-sell" style="display:none;">Sell Fish</div>
+                <div class="sidebar-category" onclick="setCategory('rod')" id="sidebar-rod" style="display:none;">Buy Rod</div>
+                <div class="sidebar-category" onclick="setCategory('place')" id="sidebar-place" style="display:none;">Buy Place</div>
+                <div class="sidebar-category" onclick="setCategory('inventory')" id="sidebar-inventory" style="display:none;">Inventory</div>
+                <div class="sidebar-section" id="mining-actions-section" style="display:none;">Mining Actions</div>
+                <div class="sidebar-category" onclick="setCategory('mine')" id="sidebar-mine" style="display:none;">Mine Gold</div>
+                <div class="sidebar-category" onclick="setCategory('upgrade_mine')" id="sidebar-upgrade-mine" style="display:none;">Upgrade Mine</div>
+                <div class="sidebar-category" onclick="setCategory('inventory')" id="sidebar-mining-inventory" style="display:none;">Inventory</div>
+                <div class="sidebar-section" id="gamble-actions-section">Gamble</div>
+                <div class="sidebar-category" onclick="setCategory('gamble')" id="sidebar-gamble">Gamble</div>
+            </div>
+            <div id="main">
+                <div id="info-row">
+                    <div class="info-box" id="money-box">money$: $0.00</div>
+                    <div class="info-box" id="place-box">Place: Pond</div>
+                    <div class="info-box" id="fishes-box">Fishes: 0/10</div>
+                    <div class="info-box" id="goldmine-box">Gold Mine Level: 1</div>
+                    <div class="info-box" id="click-box">$ per click: 0.30</div>
+                    <div class="info-box" id="passive-box">Passive $/sec: 0.00</div>
+                    <div class="info-box" id="rod-box">Rod: Basic Rod</div>
+                </div>
+                <div id="action-panel"></div>
+            </div>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
